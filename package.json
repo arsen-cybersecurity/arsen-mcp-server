@@ -1,0 +1,13 @@
+{
+  "name": "arsen-mcp-server-manifests",
+  "private": true,
+  "description": "Validation for the public Arsen hosted MCP manifests",
+  "scripts": {
+    "check": "node scripts/validate-manifests.mjs",
+    "check:schemas": "node scripts/validate-upstream-schemas.mjs"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  }
+}

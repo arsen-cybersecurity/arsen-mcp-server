@@ -1,0 +1,10 @@
+{
+  "name": "arsen",
+  "version": "1.0.0",
+  "description": "Connect Gemini CLI to your Arsen social engineering training workspace.",
+  "mcpServers": {
+    "arsen": {
+      "httpUrl": "https://api.arsen.co/mcp"
+    }
+  }
+}

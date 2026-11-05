@@ -1,0 +1,11 @@
+{
+  "name": "arsen",
+  "version": "1.0.0",
+  "description": "Connect Cursor to your Arsen social engineering training workspace.",
+  "author": {
+    "name": "Arsen"
+  },
+  "repository": "https://github.com/arsen-cybersecurity/arsen-mcp-server",
+  "license": "Apache-2.0",
+  "keywords": ["arsen", "mcp", "security-awareness"]
+}
