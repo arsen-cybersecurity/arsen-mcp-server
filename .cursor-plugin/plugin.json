@@ -1,13 +1,13 @@
 {
   "name": "arsen",
   "version": "1.0.0",
-  "description": "Connect Cursor to your Arsen social engineering training workspace.",
+  "description": "Connect Cursor to Arsen's human risk management and social engineering data.",
   "author": {
     "name": "Arsen"
   },
   "repository": "https://github.com/arsen-cybersecurity/arsen-mcp-server",
   "license": "Apache-2.0",
-  "keywords": ["arsen", "mcp", "security-awareness"],
+  "keywords": ["arsen", "mcp", "human-risk-management", "social-engineering"],
   "logo": "assets/arsen-mark.svg",
   "mcpServers": "./.mcp.json"
 }
