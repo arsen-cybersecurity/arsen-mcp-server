@@ -1,15 +1,11 @@
 # Contributing
 
-This repository is the public documentation and client-configuration surface for the Arsen-hosted MCP service. It does not accept server implementation code.
+This repository documents the Arsen-hosted MCP service and packages client connections. The server code lives elsewhere.
 
-## Before opening a pull request
+For a documentation or manifest change:
 
-- Keep examples and manifests free of tokens, secrets, customer data, and internal endpoints.
-- Check client installation and manifest claims against the current client specifications. Link the source in the pull request when a client flow or schema changes.
-- Check Arsen endpoint, tool, permission, and security claims against the running service or an approved product source. State any unverified claim in the pull request instead of publishing it as fact.
-- Run the repository validation command documented in the README.
-- Route security findings privately as described in [SECURITY.md](SECURITY.md).
+1. Check client instructions against the client's current documentation. Check Arsen tool, access, and endpoint claims against the running service or an approved product source. Link your source in the pull request.
+2. Keep tokens, customer data, and internal URLs out of examples. Report security issues privately through [SECURITY.md](SECURITY.md).
+3. Run `npm ci`, `npm run check`, and `npm run check:schemas`. If you changed a client setup path, say which client you tested and what you could not test.
 
-## Review and ownership
-
-Arsen maintainers review changes to public documentation, manifests, and branded assets before merging. A maintainer should check that the proposed text matches the hosted service and that every install path still works. Registry identity and version changes also need review from the team responsible for the official MCP Registry entry. Release and marketplace submissions remain maintainer actions.
+Ask an Arsen maintainer to review public claims and installation changes before merging. Changes to `server.json` also need review from the team that publishes the MCP Registry entry.

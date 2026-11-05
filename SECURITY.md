@@ -1,11 +1,5 @@
-# Security policy
+# Security reports
 
-This repository contains public documentation and client configuration for the Arsen-hosted MCP service. It does not contain the server implementation.
+Email [support@arsen.co](mailto:support@arsen.co?subject=Arsen%20MCP%20security%20report) to report a security issue in this repository or the hosted Arsen MCP service. Include the affected URL or file, how to reproduce the issue, and its impact. Do not post credentials, customer data, or exploit details in a public GitHub issue.
 
-## Report a vulnerability
-
-Please report suspected vulnerabilities in this repository or the hosted Arsen MCP service privately to [support@arsen.co](mailto:support@arsen.co?subject=Security%20report%3A%20Arsen%20MCP). Include the affected URL or file, a clear description, reproduction steps, and the impact. Do not include production credentials, personal data, or exploit details in a public GitHub issue or pull request.
-
-Arsen will coordinate investigation and disclosure with the reporter. This document does not promise a fixed response time or a bug bounty.
-
-For ordinary setup questions and product support, use the [Arsen Help Center](https://support.arsen.co/en/).
+For connection or account help, use the [Arsen Help Center](https://support.arsen.co/en/).
