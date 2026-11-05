@@ -5,6 +5,7 @@ const root = new URL('../', import.meta.url);
 const endpoint = 'https://api.arsen.co/mcp';
 const files = [
   'server.json',
+  'plugin.json',
   'mcp.json',
   '.mcp.json',
   '.cursor-plugin/plugin.json',
@@ -51,11 +52,18 @@ requireKeys(registry.remotes[0], ['type', 'url'], 'server.json remotes[0]');
 assert.equal(registry.remotes[0].type, 'streamable-http');
 requireEndpoint(registry.remotes[0].url, 'server.json');
 
-const cursorConfig = readJson('mcp.json');
-requireKeys(cursorConfig, ['mcpServers'], 'mcp.json');
-requireKeys(cursorConfig.mcpServers, ['arsen'], 'mcp.json mcpServers');
-requireKeys(cursorConfig.mcpServers.arsen, ['url'], 'mcp.json arsen');
-requireEndpoint(cursorConfig.mcpServers.arsen.url, 'mcp.json');
+const portableConfig = readJson('mcp.json');
+requireKeys(portableConfig, ['$schema', 'mcpServers'], 'mcp.json');
+assert.equal(portableConfig.$schema, 'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json');
+requireKeys(portableConfig.mcpServers, ['arsen'], 'mcp.json mcpServers');
+requireKeys(portableConfig.mcpServers.arsen, ['type', 'url'], 'mcp.json arsen');
+assert.equal(portableConfig.mcpServers.arsen.type, 'streamable-http');
+requireEndpoint(portableConfig.mcpServers.arsen.url, 'mcp.json');
+
+const portablePlugin = readJson('plugin.json');
+assert.equal(portablePlugin.$schema, 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json');
+assert.equal(portablePlugin.name, 'arsen');
+assert.equal(portablePlugin.repository, 'https://github.com/arsen-cybersecurity/arsen-mcp-server');
 
 const claudeConfig = readJson('.mcp.json');
 requireKeys(claudeConfig, ['mcpServers'], '.mcp.json');
@@ -69,7 +77,9 @@ for (const file of ['.cursor-plugin/plugin.json', '.claude-plugin/plugin.json'])
   assert.equal(plugin.name, 'arsen', `${file} plugin name`);
   assert.match(plugin.version, /^\d+\.\d+\.\d+$/, `${file} plugin version`);
   assert.equal(plugin.repository, 'https://github.com/arsen-cybersecurity/arsen-mcp-server');
+  assert.equal(plugin.mcpServers, './.mcp.json', `${file} must use the shared remote connection`);
 }
+assert.ok(existsSync(new URL(readJson('.cursor-plugin/plugin.json').logo, root)), 'Cursor logo path is missing');
 
 const gemini = readJson('gemini-extension.json');
 assert.equal(gemini.name, 'arsen');

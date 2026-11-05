@@ -4,6 +4,11 @@
   "title": "Arsen Cybersecurity",
   "description": "Assess organizational resilience through social-engineering simulations and awareness training.",
   "version": "1.0.0",
+  "websiteUrl": "https://api.arsen.co/mcp/llms.txt",
+  "repository": {
+    "url": "https://github.com/arsen-cybersecurity/arsen-mcp-server",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",

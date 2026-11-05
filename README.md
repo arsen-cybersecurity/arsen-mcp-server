@@ -34,6 +34,10 @@ Client menus and account requirements change. These are starting points from the
 | ChatGPT | In a workspace that allows custom MCP servers, go to **Plugins → Add custom MCP server**, enter the public HTTPS URL, select OAuth, and review the discovered tools. Workspace permissions and plan requirements apply. | [Connect custom MCP servers](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt) |
 | Gemini CLI | Run `gemini mcp add --transport http --scope user arsen https://api.arsen.co/mcp`, then complete OAuth when prompted. | [Gemini CLI MCP guide](https://geminicli.com/docs/tools/mcp-server/) |
 
+## Client packages in this repository
+
+The root `plugin.json` and `mcp.json` form an [Agent Plugins](https://agent-plugins.org/) package for clients that support that format. Cursor and Claude Code use their own plugin manifests with the shared `.mcp.json` connection. `gemini-extension.json` is a Gemini CLI extension, and `server.json` is MCP Registry metadata. All connection files point to the same hosted endpoint; none starts a local server or contains credentials. Installing a package still requires client support and Arsen authorization.
+
 For a client that accepts a URL but does not offer OAuth, open **MCP → Other** in Arsen for its manual setup instructions. That flow provides a bearer token for an `Authorization: Bearer …` header. A manual token can authorize write-capable tools, subject to your Arsen permissions and the tools actually exposed to your session. Treat it as a secret: keep it out of chat messages, shared configuration files, screenshots, and support tickets. Prefer OAuth when your client supports it.
 
 ## What you can ask
