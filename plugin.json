@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "arsen",
+  "version": "1.0.0",
+  "description": "Connect AI agents to Arsen's human risk management and social engineering data.",
+  "author": {
+    "name": "Arsen",
+    "url": "https://arsen.co"
+  },
+  "homepage": "https://api.arsen.co/mcp/llms.txt",
+  "repository": "https://github.com/arsen-cybersecurity/arsen-mcp-server",
+  "license": "Apache-2.0",
+  "keywords": ["arsen", "mcp", "human-risk-management", "social-engineering"]
+}

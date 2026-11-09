@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "arsen": {
+      "type": "http",
+      "url": "https://api.arsen.co/mcp"
+    }
+  }
+}

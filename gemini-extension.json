@@ -1,0 +1,10 @@
+{
+  "name": "arsen",
+  "version": "1.0.0",
+  "description": "Connect Gemini CLI to Arsen's human risk management and social engineering data.",
+  "mcpServers": {
+    "arsen": {
+      "httpUrl": "https://api.arsen.co/mcp"
+    }
+  }
+}
