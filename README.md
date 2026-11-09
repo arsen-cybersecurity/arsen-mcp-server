@@ -47,6 +47,6 @@ For a manual token, use **Replace token** under **MCP → Other** in Arsen to re
 
 `server.json` holds MCP Registry metadata. Its version tracks the MCP server, separately from Arsen's backend release and the MCP protocol version. `plugin.json` and `mcp.json` form an [Agent Plugins](https://agent-plugins.org/) package. Cursor and Claude Code share `.mcp.json`; Gemini CLI uses `gemini-extension.json`.
 
-After changing a manifest, run `npm ci`, `npm run check`, and `npm run check:schemas`. The schema check fetches the published schemas. Client sign-in needs a separate test.
+After changing a client connection, test sign-in and a read-only tool call in that client.
 
 For setup help, use [Arsen Support](https://support.arsen.co). Report security issues privately using [SECURITY.md](SECURITY.md).
