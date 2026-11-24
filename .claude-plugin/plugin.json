@@ -1,6 +1,6 @@
 {
   "name": "arsen",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Build and launch social engineering training simulations, then read campaign results and human risk figures from your Arsen organizations.",
   "author": {
     "name": "Arsen"
