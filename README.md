@@ -29,6 +29,17 @@ Custom MCP connections can depend on your plan or workspace settings.
 
 If your client cannot use OAuth, open **MCP → Other** in Arsen for manual token setup. Keep the token in your client's private configuration; do not paste it into chat or commit it. Manual tokens may allow changes as well as reads, depending on your Arsen permissions.
 
+### Gemini CLI extension
+
+To install the extension instead of adding the server manually:
+
+```sh
+git clone https://github.com/arsen-cybersecurity/arsen-mcp-server.git
+gemini extensions install ./arsen-mcp-server
+```
+
+Restart Gemini CLI, run `/mcp auth arsen` to sign in, then `/mcp list` to see available tools.
+
 ## Try it
 
 > Using Arsen, ask me which organization to use. Then summarize a recent simulation campaign and its results.
