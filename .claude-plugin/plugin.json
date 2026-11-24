@@ -1,11 +1,16 @@
 {
   "name": "arsen",
-  "version": "1.0.0",
-  "description": "Connect Claude Code to Arsen's human risk management and social engineering data.",
+  "version": "1.0.1",
+  "description": "Build and launch social engineering training simulations, then read campaign results and human risk figures from your Arsen organizations.",
   "author": {
     "name": "Arsen"
   },
   "repository": "https://github.com/arsen-cybersecurity/arsen-mcp-server",
+  "homepage": "https://api.arsen.co/mcp/llms.txt",
+  "documentationUrl": "https://api.arsen.co/mcp/llms.txt",
+  "supportUrl": "https://support.arsen.co/en/",
+  "privacyPolicyUrl": "https://arsen.co/politique-de-confidentialite",
+  "icon": "./assets/arsen-mark.png",
   "license": "Apache-2.0",
   "keywords": ["arsen", "mcp", "human-risk-management", "social-engineering"],
   "mcpServers": "./.mcp.json"
