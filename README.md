@@ -31,11 +31,10 @@ If your client cannot use OAuth, open **MCP → Other** in Arsen for manual toke
 
 ### Gemini CLI extension
 
-To install the extension instead of adding the server manually:
+Install [v1.0.0](https://github.com/arsen-cybersecurity/arsen-mcp-server/releases/tag/v1.0.0) instead of adding the server manually:
 
 ```sh
-git clone https://github.com/arsen-cybersecurity/arsen-mcp-server.git
-gemini extensions install ./arsen-mcp-server
+gemini extensions install https://github.com/arsen-cybersecurity/arsen-mcp-server --ref v1.0.0
 ```
 
 Restart Gemini CLI, run `/mcp auth arsen` to sign in, then `/mcp list` to see available tools.
